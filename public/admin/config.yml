@@ -1,0 +1,50 @@
+backend:
+  name: git-gateway
+  branch: main # or your default branch
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  # Static Pages
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Homepage"
+        file: "public/index.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+          - {label: "Content", name: "body", widget: "markdown"}
+
+  # Services Pages
+  - name: "services"
+    label: "Services"
+    folder: "services"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Content", name: "body", widget: "markdown"}
+      - {label: "Schema", name: "schema", widget: "code", default_language: "json"}
+
+  # Blog Posts
+  - name: "blog"
+    label: "Blog"
+    folder: "blog"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Content", name: "body", widget: "markdown"}
+
+  # Directory Entries
+  - name: "directories"
+    label: "Directories"
+    folder: "directories"
+    create: true
+    fields:
+      - {label: "Location Name", name: "title", widget: "string"}
+      - {label: "Content", name: "body", widget: "markdown"} 
