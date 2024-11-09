@@ -11,22 +11,23 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Use Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
       
-      - name: Install Dependencies
-        run: npm ci
+      - name: Install dependencies
+        run: npm install
       
-      - name: Build Project
+      - name: Build
         run: npm run build
       
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v2
+        uses: nwtgck/actions-netlify@v2.0
         with:
           publish-dir: '.next'
           production-branch: main
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
