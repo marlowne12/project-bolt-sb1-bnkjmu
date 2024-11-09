@@ -1,5 +1,28 @@
 backend:
   name: git-gateway
+<<<<<<< HEAD
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/pages/home.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+  
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+=======
   branch: main # or your default branch
 
 media_folder: "public/images"
@@ -23,10 +46,24 @@ collections:
     label: "Services"
     folder: "services"
     create: true
+>>>>>>> 275510e0c376da15b11b37cde137b3b603b06b97
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Content", name: "body", widget: "markdown"}
+<<<<<<< HEAD
+
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+=======
       - {label: "Schema", name: "schema", widget: "code", default_language: "json"}
 
   # Blog Posts
@@ -48,3 +85,4 @@ collections:
     fields:
       - {label: "Location Name", name: "title", widget: "string"}
       - {label: "Content", name: "body", widget: "markdown"} 
+>>>>>>> 275510e0c376da15b11b37cde137b3b603b06b97
