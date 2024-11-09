@@ -1,0 +1,38 @@
+.assessment-tool {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.assessment-tool h2 {
+  margin-bottom: 15px;
+}
+
+.form-step {
+  margin-bottom: 15px;
+}
+
+.form-step label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-step select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.recommendation {
+  background-color: #e6ffe6;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.recommendation h3 {
+  margin-top: 0;
+} 
