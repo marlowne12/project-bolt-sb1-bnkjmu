@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Essential Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Search Console Verification -->
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+  
+  <!-- Web Vitals Monitoring -->
+  <script src="https://unpkg.com/web-vitals@2/dist/web-vitals.iife.js"></script>
+  <script>
+    function sendToAnalytics(metric) {
+      gtag('event', metric.name, {
+        event_category: 'Web Vitals',
+        event_label: metric.id,
+        value: Math.round(metric.value),
+        non_interaction: true,
+      });
+    }
+
+    webVitals.getCLS(sendToAnalytics);
+    webVitals.getFID(sendToAnalytics);
+    webVitals.getLCP(sendToAnalytics);
+    webVitals.getFCP(sendToAnalytics);
+    webVitals.getTTFB(sendToAnalytics);
+  </script>
+  
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <!-- Body Content -->
+  
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html> 

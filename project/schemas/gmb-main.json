@@ -1,0 +1,31 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Your Agency Name",
+  "image": "https://www.youragency.com/logo.png",
+  "telephone": "+1-800-123-4567",
+  "email": "contact@youragency.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Main St",
+    "addressLocality": "Richland",
+    "addressRegion": "WA",
+    "postalCode": "99354",
+    "addressCountry": "US"
+  },
+  "url": "https://www.youragency.com",
+  "sameAs": [
+    "https://www.facebook.com/youragency",
+    "https://www.twitter.com/youragency",
+    "https://www.linkedin.com/company/youragency"
+  ],
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 46.2800,
+    "longitude": -119.2753
+  },
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "servesCuisine": "N/A",
+  "priceRange": "$$",
+  "description": "Your Agency Name offers professional SEO, Web Design, and Reputation Management services in Richland, Kennewick, and Pasco."
+} 

@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import click-to-call styles */
+@import '../styles/click-to-call.css';
+
+/* Or copy the styles directly here */ 
